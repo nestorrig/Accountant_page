@@ -1,0 +1,28 @@
+$primary-color: #ffb400;
+$secondary-color: #184341;
+$text-color: #616670;
+$light-color: #ffffff;
+
+
+@mixin Titles($weight, $size, $textTransform: none){
+    font-weight: $weight;
+    font-size: $size;
+    text-transform: $textTransform;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {@include Titles(800, 5rem)}
+
+h2 {@include Titles(800, 3rem)}
+h2.--uppercase {@include Titles(600, 1.8rem, uppercase)}
+h2.--card{@include Titles(600, 2.5rem)}
+h2.--data {@include Titles(400, 1.6rem)}
+
+h3 {@include Titles(800, 2.5rem)}
+h3.--uppercase {@include Titles(600, 1.6rem, uppercase)}
+h3.--small{@include Titles(400, 1.6rem)}
