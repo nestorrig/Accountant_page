@@ -52,4 +52,21 @@ h3.--small {
   font-weight: 400;
   font-size: 1.6rem;
   text-transform: none;
+}
+
+span.--number {
+  font-weight: 800;
+  font-size: 3rem;
+  text-transform: none;
+}
+
+p, a, li {
+  font-size: 1.6rem;
+}
+
+svg {
+  width: 24px;
+}
+svg path {
+  fill: #184341;
 }/*# sourceMappingURL=main.css.map */
