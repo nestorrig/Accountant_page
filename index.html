@@ -17,8 +17,8 @@
 </head>
 <body>
 
-    <div id="MobileMenu">
-        <figure class="iconContainer .in--menu">
+    <div id="MobileMenu" class="inactive">
+        <figure class="iconContainer in--menu">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
                 <path fill="#ffb400" d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128L50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"></path>
             </svg>
@@ -33,11 +33,11 @@
         </nav>
     </div>
 
-    <header>
+    <header class="header">
         <figure class="logo">
-            <img src="" alt="">
+            <img src="/assets/Logo _CE.png" alt="Page logo">
         </figure>
-        <nav class="menu menu--desktop">
+        <nav class="menu menu--desktop inactive">
             <a href="#Home">Inicio</a>
             <a href="#About">Sobre mi</a>
             <a href="#Testimonials">Testimonios</a>
@@ -45,7 +45,7 @@
             <a href="#Contact">Contacto</a>
             <button type="button">Haz una cita</button>
         </nav>
-        <figure class="iconContainer .in--menu" >
+        <figure class="iconContainer in--menu" >
             <svg id="MenuIcon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
                 <path fill="#ffb400" d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z"></path>
             </svg>
@@ -53,7 +53,7 @@
     </header>
 
     <main>
-        <section class="home" id="Home">
+        <section class="home section" id="Home">
             <article class="home__info">
                 <h2 class="--uppercase">
                     Soy contador experto en impuestos
@@ -68,7 +68,7 @@
             <button type="button">Iniciemos</button>
         </section>
 
-        <section class="about" id="About">
+        <section class="about section" id="About">
             <div>
                 <div>
                     <article class="section__header about__header">
@@ -211,7 +211,7 @@
             </div>
         </section>
 
-        <section class="offers" id="Offers">
+        <section class="offers section" id="Offers">
             <article class="section__header offers__header">
                 <h2>
                     Ofrecemos diversos planes para <span id="OffersWords"></span>
@@ -224,7 +224,7 @@
             <img src="https://www.generacionuniversitaria.com.mx/wp-content/uploads/2022/06/Contador-1024x631.jpg" alt="">
         </section>
 
-        <section class="services" id="Services">
+        <section class="services section" id="Services">
             <article class="section__header services__header">
                 <h3 class="--uppercase">
                     Mis servicios
@@ -331,7 +331,7 @@
             </div>
         </section>
 
-        <section class="numbers" id="Numbers">
+        <section class="numbers section" id="Numbers">
             <div class="numbers__item">
                 <figure>
                     <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
@@ -364,7 +364,9 @@
             </div>
         </section>
 
-        <section class="testimonials" id="Testimonials">
+        <section class="section" style="padding: 0;"></section>
+        
+        <section class="testimonials section" id="Testimonials">
             <article class="section__header testimonials__header">
                 <h3 class="--uppercase">
                     Testimonios
@@ -400,7 +402,7 @@
             </div>
         </section>
 
-        <section class="faq" id="Faq">
+        <section class="faq section" id="Faq">
             <div>
                 <article class="section__header faq__header">
                     <h3 class="--uppercase">

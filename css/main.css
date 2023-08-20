@@ -1,3 +1,35 @@
+.home-image, .home {
+  background-image: url(https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.inactive {
+  display: none !important;
+}
+
+.section__header h3 {
+  color: #ffb400;
+  margin-bottom: 24px;
+}
+.section__header h2 {
+  color: #184341;
+  margin-bottom: 24px;
+}
+.section__header p {
+  margin-bottom: 24px;
+}
+.section__header--line {
+  margin-bottom: 36px;
+  width: 200px;
+  height: 6px;
+  background-color: #ffb400;
+}
+.section__header + p {
+  margin-bottom: 24px;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -68,5 +100,124 @@ svg {
   width: 24px;
 }
 svg path {
-  fill: #184341;
+  fill: #ffb400;
+}
+
+button {
+  width: 180px;
+  height: 60px;
+  background-color: #ffb400;
+  color: #184341;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+#MobileMenu {
+  position: fixed;
+  width: 75%;
+  max-width: 360px;
+  height: 100vh;
+  padding: 36px;
+  background-color: #184341;
+  color: #ffffff;
+}
+#MobileMenu .iconContainer.in--menu {
+  display: grid;
+  place-content: center;
+  margin-left: auto;
+  width: 50px;
+  height: 50px;
+  background-color: #ffb400;
+}
+#MobileMenu .iconContainer.in--menu svg {
+  width: 40px;
+  width: 40px;
+}
+#MobileMenu .iconContainer.in--menu svg path {
+  fill: #ffffff;
+}
+#MobileMenu .iconContainer.in--menu:hover {
+  background-color: #184341;
+  border: 2px solid #ffb400;
+}
+
+.menu {
+  display: flex;
+}
+.menu.menu--mobile {
+  margin-top: 100px;
+  flex-direction: column;
+  gap: 30px;
+}
+.menu a {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.menu a:hover {
+  color: #ffb400;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #616670;
+  height: 100px;
+  margin-bottom: -100px;
+}
+.header figure {
+  width: 200px;
+  height: 100px;
+}
+.header figure img {
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
+.header .iconContainer.in--menu {
+  padding: 24px;
+  display: grid;
+  justify-content: end;
+  align-items: start;
+}
+.header .iconContainer.in--menu svg {
+  width: 40px;
+  width: 40px;
+}
+.header .iconContainer.in--menu svg path {
+  fill: #ffb400;
+}
+
+main {
+  width: 100%;
+}
+main > section {
+  padding-inline: 16px;
+  padding-block: 80px;
+  color: #616670;
+}
+main > .section:nth-child(odd) {
+  background-color: #184341;
+  color: #ffffff;
+}
+main > .section:nth-child(odd) h2 {
+  color: #ffffff;
+}
+
+.home {
+  padding-block: 100px;
+  color: #ffffff;
+}
+.home__info {
+  margin-top: 100px;
+}
+.home__info h2 {
+  margin-bottom: 16px;
+}
+.home__info h1 {
+  padding-left: 16px;
+  margin-bottom: 16px;
+  border-left: 8px solid #ffb400;
+}
+.home__info p {
+  margin-bottom: 24px;
 }/*# sourceMappingURL=main.css.map */
