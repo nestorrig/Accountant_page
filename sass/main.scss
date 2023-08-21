@@ -12,15 +12,15 @@ $primary-light-color: #ffffff;
 }
 @mixin svgIcons($size, $color) {
     svg {
+        min-width: $size;
         width: $size;
-        width: $size;
+        height: $size;
         path {
             fill: $color;
         }
     }
 }
-.home-image {
-    background-image: url(https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg);
+.image {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -29,6 +29,7 @@ $primary-light-color: #ffffff;
     display: none !important;
 }
 .section__header {
+    max-width: 360px;
     h3 {
         color: $primary-color;
         margin-bottom: 24px;
@@ -45,6 +46,9 @@ $primary-light-color: #ffffff;
         width: 200px;
         height: 6px;
         background-color: $primary-color;
+    }
+    button {
+        margin-bottom: 24px;
     }
     + p {
         margin-bottom: 24px;
@@ -68,14 +72,16 @@ h2.--uppercase {
     @include Titles(600, 1.8rem, uppercase)
 }
 h2.--card {
-    @include Titles(600, 2.5rem)
+    @include Titles(600, 2.5rem);
+    color: $secondary-color;
 }
 h2.--data {
     @include Titles(400, 1.6rem)
 }
 
 h3 {
-    @include Titles(800, 2.5rem)
+    @include Titles(800, 2.5rem);
+    color: $secondary-color;
 }
 h3.--uppercase {
     @include Titles(600, 1.6rem, uppercase)
@@ -191,7 +197,8 @@ main {
     }
 }
 .home {
-    @extend .home-image;
+    @extend .image;
+    background-image: url(https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg);
     padding-block: 100px;
     color: $primary-light-color;
     &__info {
@@ -206,6 +213,186 @@ main {
         }
         p {
             margin-bottom: 24px;
+        }
+    }
+}
+.about {
+    > div {
+        margin-bottom: 48px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+    }
+    &__check {
+        &__item {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+
+            font-weight: 600;
+            @include svgIcons(20px, $primary-color);
+        }
+    }
+    &__form {
+        width: 100%;
+        -webkit-box-shadow: -2px 17px 25px 4px $secondary-light-color;
+        -moz-box-shadow: -2px 17px 25px 4px $secondary-light-color;
+        box-shadow: -2px 17px 25px 4px $secondary-light-color;
+        padding: 32px 16px;
+
+        input {
+            padding: 8px 16px;
+            margin-bottom: 24px;
+            width: 100%;
+            height: 48px;
+            background-color: $secondary-light-color;
+            color: $text-color;
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        label {
+            margin-bottom: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            input {
+                width: 16px;
+                height: 16px;
+                margin: 0;
+            }
+            p, a {
+                font-size: 1.4rem;
+            }
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__roles {
+        flex-direction: column;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 24px;
+            text-align: center;
+
+            figure {
+                @include svgIcons(60px, $primary-color);
+                svg {margin: 0 auto;}
+            }
+            h3 {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+.offers {
+    #OffersWords {
+        color: $primary-color;
+    }
+}
+.services {
+    &__header  {
+        margin: 0 auto;
+        text-align: center;
+        .section__header--line {
+            margin-inline: auto;
+        }
+    }
+    &__box {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1200px;
+        display: grid;
+        // grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); in responsive
+        gap: 24px;
+    }
+    &__item {
+        display: grid;
+        place-content: center;
+        width: 100%;
+        // max-width: 400px;
+        height: 350px;
+        padding: 50px;
+        border: 1px solid $secondary-light-color;
+        @include svgIcons(60px, $primary-color);
+        svg, h2 {
+            margin-bottom: 24px;
+        }
+        &:hover {
+            background-color: $secondary-color;
+            color: $primary-light-color;
+            h2 {
+                color: $primary-light-color;
+            }
+            transition: all .3s;
+        }
+    }
+}
+.numbers {
+    @extend .image;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStud-YhwB9Dde0fPyidw4iFstwUTDL_DXZ4w&usqp=CAU);
+    @include svgIcons(60px, $primary-color);
+
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    text-align: center;
+    svg {
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+}
+.testimonials {
+    &__header {
+        text-align: end;
+        .section__header--line {
+            margin-left: auto;
+        }
+    }
+    &__box {
+        background-color: $primary-light-color;
+        color: $text-color;
+    }
+    &__item {
+        padding: 24px;
+
+    }
+    &__person {
+        margin-bottom: 24px;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+
+        figure {
+            width: 60px;
+            height: 60px;
+            img {
+                height: 100%;
+                border-radius: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+        &__name {
+            @include Titles(700, 20px);
+            color: $secondary-color;
+        }
+        &__role {
+            margin-top: 4px;
+            color: $primary-color;
+        }
+    }
+}
+.faq {
+    &__header {
+        text-align: start;
+        .section__header--line {
+            margin-right: auto;
         }
     }
 }
