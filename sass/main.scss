@@ -95,6 +95,7 @@ span.--number {
 
 p, a, li {
     font-size: 1.6rem;
+    line-height: 2.1rem;
 }
 svg {
     width: 24px;
@@ -110,6 +111,7 @@ button {
     color: $secondary-color;
     font-size: 1.6rem;
     font-weight: 600;
+    cursor: pointer;
 }
 
 // Mobile menu
@@ -241,7 +243,7 @@ main {
         box-shadow: -2px 17px 25px 4px $secondary-light-color;
         padding: 32px 16px;
 
-        input {
+        &__input {
             padding: 8px 16px;
             margin-bottom: 24px;
             width: 100%;
@@ -251,8 +253,13 @@ main {
             font-size: 1.6rem;
             font-weight: 600;
         }
-
-        label {
+        #FormExtraDetails {
+            height: 96px;
+            overflow-x: unset;
+            overflow-y: scroll;
+            resize: none;
+        }
+        &__terms {
             margin-bottom: 24px;
             display: flex;
             gap: 16px;
@@ -261,6 +268,7 @@ main {
                 width: 16px;
                 height: 16px;
                 margin: 0;
+                cursor: pointer;
             }
             p, a {
                 font-size: 1.4rem;
@@ -350,6 +358,7 @@ main {
 .testimonials {
     &__header {
         text-align: end;
+        margin-left: auto;
         .section__header--line {
             margin-left: auto;
         }
