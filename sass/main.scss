@@ -20,6 +20,11 @@ $primary-light-color: #ffffff;
         }
     }
 }
+@mixin responsive($width){
+    @media screen and (min-width: $width) {
+        @content
+    }
+}
 .center {
     margin: 0 auto;
     max-width: 1200px;
@@ -28,8 +33,6 @@ $primary-light-color: #ffffff;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    object-fit: cover;
-    object-position: center;
     height: 100%;
 }
 .inactive {
@@ -72,11 +75,11 @@ body {
 }
 
 h1 {
-    @include Titles(800, 5rem)
+    @include Titles(800, 5.8rem)
 }
 
 h2 {
-    @include Titles(800, 3rem)
+    @include Titles(800, 4rem)
 }
 h2.--uppercase {
     @include Titles(600, 1.8rem, uppercase)
@@ -122,6 +125,14 @@ button {
     font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
+    &:hover {
+        background-color: $secondary-color;
+        color: $primary-light-color;
+    }
+    &:active {
+        transform: scale(.9);
+        transition: all .3s;
+    }
 }
 
 // Mobile menu
@@ -158,7 +169,17 @@ button {
         flex-direction: column;
         gap: 30px;
     }
-    //&.menu--desktop
+    &.menu--desktop {
+        display: none;
+        color: $primary-light-color;
+
+        @include responsive(950px) {
+            margin-right: 36px;
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+    }
     a {
         font-size: 1.5rem;
         font-weight: 700;
@@ -166,13 +187,13 @@ button {
             color: $primary-color;
         }
     }
+
 }
 // Header
 .header {
-    // position: relative;
+    position: relative;
     display: flex;
     justify-content: space-between;
-    background-color: #616670;
     height: 100px;
     margin-bottom: -100px;
     figure {
@@ -184,11 +205,20 @@ button {
         }
     }
     .iconContainer.in--menu {
-        padding: 24px;
+        position: fixed;
+        top: 8px;
+        right: 8px;
+        width: 56px;
+        height: 56px;
+        padding: 8px;
         display: grid;
-        justify-content: end;
-        align-items: start;
-        @include svgIcons(40px, $primary-color);
+        place-content: center;
+        background-color: $primary-color;
+        border-radius: 100%;
+        @include svgIcons(40px, $primary-light-color);
+        @include responsive(950px) {
+            display: none;
+        }
     }
 }
 
@@ -213,8 +243,15 @@ main {
     background-image: url(https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg);
     padding-block: 100px;
     color: $primary-light-color;
+    @include responsive(1200px) {
+        height: 800px;
+    }
     &__info {
-        margin-top: 100px;
+        margin-top: 150px;
+        @include responsive(950px) {
+            padding-left: 600px;
+            margin-top: 200px;
+        }
         h2 {
             margin-bottom: 16px;
         }
@@ -233,7 +270,17 @@ main {
         margin-bottom: 48px;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         gap: 48px;
+        
+        @include responsive(760px) {
+            justify-content: space-between;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+    }
+    .about__info {
+        max-width: 700px;
     }
     &__check {
         &__item {
@@ -248,10 +295,16 @@ main {
     }
     &__form {
         width: 100%;
-        -webkit-box-shadow: -2px 17px 25px 4px $secondary-light-color;
-        -moz-box-shadow: -2px 17px 25px 4px $secondary-light-color;
-        box-shadow: -2px 17px 25px 4px $secondary-light-color;
+        height: fit-content;
         padding: 32px 16px;
+        box-shadow: 1px 1px 10px -1px $text-color;
+        -webkit-box-shadow: 1px 1px 10px -1px $text-color;
+        -moz-box-shadow: 1px 1px 10px -1px $text-color;
+        background-color: $primary-light-color;
+        @include responsive(1000px) {
+            max-width: 450px;
+            margin-top: -100px;
+        }
 
         &__input {
             padding: 8px 16px;
@@ -300,6 +353,7 @@ main {
 
     &__roles {
         flex-direction: column;
+
         &__item {
             display: flex;
             flex-direction: column;
@@ -318,6 +372,20 @@ main {
     }
 }
 .offers {
+    .center {
+        @include responsive(760px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            img {
+                height: 100%;
+            }
+        }
+        @include responsive(1000px) {
+            grid-template-columns: 2fr 3fr;
+            grid-auto-rows: 300px;
+        }
+    }
     #OffersWords {
         color: $primary-color;
     }
@@ -373,11 +441,40 @@ main {
     }
 }
 .testimonials {
+    @include responsive(950px) {
+        position: relative;
+        > .center {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            gap: 36px;
+            position: relative;
+        }
+        > .bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 35vw;
+            height: 100%;
+            background-color: $primary-light-color;
+        }
+        &__header {
+            min-width: 450px;
+        }
+        &__box {
+            height: fit-content;
+            min-width: 450px;
+        }
+    }
     &__header {
         text-align: end;
         margin-left: auto;
         .section__header--line {
             margin-left: auto;
+        }
+        @include responsive(760px) {
+            max-width: 500px;
+            margin: 0 0 0 auto;
         }
     }
     &__box {
@@ -399,7 +496,7 @@ main {
             height: 60px;
             img {
                 border-radius: 100%;
-                @extend .image
+                height: 100%
             }
         }
         &__name {
@@ -413,6 +510,10 @@ main {
     }
 }
 .faq {
+    @include responsive(760px) {
+        display: flex;
+    gap: 24px;
+    }
     &__header {
         text-align: start;
         .section__header--line {
