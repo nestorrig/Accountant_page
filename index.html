@@ -17,19 +17,14 @@
 </head>
 <body>
 
-    <div id="MobileMenu" class="inactive">
-        <figure class="iconContainer in--menu">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-                <path fill="#ffb400" d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128L50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"></path>
-            </svg>
-        </figure>
+    <div id="MobileMenu" class="">
         <nav class="menu menu--mobile">
-            <a href="#Home">Inicio</a>
-            <a href="#About">Sobre mi</a>
-            <a href="#Services">Servicios</a>
-            <a href="#Testimonials">Testimonios</a>
-            <a href="#Faq">Preguntas Frecuentes</a>
-            <a href="#Contact">Contacto</a>
+            <a class="menu__item__mobile" href="#Home">Inicio</a>
+            <a class="menu__item__mobile" href="#About">Sobre mi</a>
+            <a class="menu__item__mobile" href="#Services">Servicios</a>
+            <a class="menu__item__mobile" href="#Testimonials">Testimonios</a>
+            <a class="menu__item__mobile" href="#Faq">Preguntas Frecuentes</a>
+            <a class="menu__item__mobile" href="#Contact">Contacto</a>
         </nav>
     </div>
 
@@ -45,9 +40,12 @@
             <a href="#Contact">Contacto</a>
             <button type="button">Haz una cita</button>
         </nav>
-        <figure class="iconContainer in--menu" >
-            <svg id="MenuIcon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+        <figure id="MenuButtons" class="iconContainer in--menu" >
+            <svg id="OpenMenu" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
                 <path fill="#ffb400" d="M3 18v-2h18v2H3Zm0-5v-2h18v2H3Zm0-5V6h18v2H3Z"></path>
+            </svg>
+            <svg id="CloseMenu" class="inactive" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                <path fill="#ffb400" d="M205.66 194.34a8 8 0 0 1-11.32 11.32L128 139.31l-66.34 66.35a8 8 0 0 1-11.32-11.32L116.69 128L50.34 61.66a8 8 0 0 1 11.32-11.32L128 116.69l66.34-66.35a8 8 0 0 1 11.32 11.32L139.31 128Z"></path>
             </svg>
         </figure>
     </header>
@@ -443,21 +441,13 @@
             </div>
             <div class="faq__box center">
                 <div class="faq__item">
-                    <div class="faq__item__question">
+                    <div class="faq__item__question faq__item__question__active">
                         <p>
                             Pregunta frecuente
                         </p>
                         <figure>
-                            <!-- 
-                                q = document.getElementsByClassName('faq__item__question')
-                                q[0].children[1].firstElementChild.
-                                q[0].lastElementChild.lastElementChild
-                            -->
                             <svg class="arrow arrow--down" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
                                 <path fill="#ffb400" d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
-                            </svg>
-                            <svg class="arrow arrow--up inactive" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
-                                <path fill="#ffb400" d="M104.704 685.248a64 64 0 0 0 90.496 0l316.8-316.8l316.8 316.8a64 64 0 0 0 90.496-90.496L557.248 232.704a64 64 0 0 0-90.496 0L104.704 594.752a64 64 0 0 0 0 90.496z"></path>
                             </svg>
                         </figure>
                     </div>
@@ -473,20 +463,12 @@
                             Pregunta frecuente
                         </p>
                         <figure>
-                            <!-- 
-                                q = document.getElementsByClassName('faq__item__question')
-                                q[0].children[1].firstElementChild.
-                                q[0].lastElementChild.lastElementChild
-                            -->
                             <svg class="arrow arrow--down" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
                                 <path fill="#ffb400" d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
                             </svg>
-                            <svg class="arrow arrow--up inactive" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
-                                <path fill="#ffb400" d="M104.704 685.248a64 64 0 0 0 90.496 0l316.8-316.8l316.8 316.8a64 64 0 0 0 90.496-90.496L557.248 232.704a64 64 0 0 0-90.496 0L104.704 594.752a64 64 0 0 0 0 90.496z"></path>
-                            </svg>
                         </figure>
                     </div>
-                    <div class="faq__item__answer">
+                    <div class="faq__item__answer inactive">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maxime repudiandae atque accusamus? Quaerat, atque quos temporibus maiores ipsam asperiores natus, impedit dolor repudiandae libero recusandae odio veritatis eligendi numquam!
                         </p>
@@ -498,20 +480,12 @@
                             Pregunta frecuente
                         </p>
                         <figure>
-                            <!-- 
-                                q = document.getElementsByClassName('faq__item__question')
-                                q[0].children[1].firstElementChild.
-                                q[0].lastElementChild.lastElementChild
-                            -->
                             <svg class="arrow arrow--down" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
                                 <path fill="#ffb400" d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
                             </svg>
-                            <svg class="arrow arrow--up inactive" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
-                                <path fill="#ffb400" d="M104.704 685.248a64 64 0 0 0 90.496 0l316.8-316.8l316.8 316.8a64 64 0 0 0 90.496-90.496L557.248 232.704a64 64 0 0 0-90.496 0L104.704 594.752a64 64 0 0 0 0 90.496z"></path>
-                            </svg>
                         </figure>
                     </div>
-                    <div class="faq__item__answer">
+                    <div class="faq__item__answer inactive">
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maxime repudiandae atque accusamus? Quaerat, atque quos temporibus maiores ipsam asperiores natus, impedit dolor repudiandae libero recusandae odio veritatis eligendi numquam!
                         </p>
@@ -584,5 +558,7 @@
             </p>
         </div>
     </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/faq.js"></script>
 </body>
 </html>
