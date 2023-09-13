@@ -177,7 +177,7 @@ button:active {
   width: 75%;
   max-width: 360px;
   height: 100vh;
-  padding: 36px;
+  padding: 100px 36px;
   background-color: #184341;
   color: #ffffff;
 }
@@ -191,7 +191,7 @@ button:active {
   display: flex;
 }
 .menu.menu--mobile {
-  margin-top: 100px;
+  margin-top: 20px;
   flex-direction: column;
   gap: 48px;
 }

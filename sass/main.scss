@@ -170,7 +170,7 @@ button {
     width: 75%;
     max-width: 360px;
     height: 100vh;
-    padding: 36px;
+    padding: 100px  36px;
     background-color: $secondary-color;
     color: $primary-light-color;
     @include responsive(950px) {
@@ -180,7 +180,7 @@ button {
 .menu {
     display: flex;
     &.menu--mobile{
-        margin-top: 100px;
+        margin-top: 20px;
         flex-direction: column;
         gap: 48px;
         a {
