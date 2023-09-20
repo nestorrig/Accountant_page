@@ -176,8 +176,8 @@ button:active {
   z-index: 1;
   width: 75%;
   max-width: 360px;
-  height: 100vh;
-  padding: 100px 36px;
+  height: 100dvh;
+  padding: 50px 36px;
   background-color: #184341;
   color: #ffffff;
 }
@@ -264,6 +264,8 @@ main {
   width: 100%;
 }
 main > section {
+  max-width: 1600px;
+  margin: 0 auto;
   padding-inline: 16px;
   padding-block: 80px;
   color: #616670;
@@ -537,6 +539,7 @@ main > .section:nth-child(odd) h2 {
     top: 0;
     left: 0;
     width: 35vw;
+    max-width: 700px;
     height: 100%;
     background-color: #ffffff;
   }

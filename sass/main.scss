@@ -169,8 +169,8 @@ button {
     z-index: 1;
     width: 75%;
     max-width: 360px;
-    height: 100vh;
-    padding: 100px  36px;
+    height: 100dvh;
+    padding: 50px  36px;
     background-color: $secondary-color;
     color: $primary-light-color;
     @include responsive(950px) {
@@ -244,6 +244,8 @@ button {
 main {
     width: 100%;
     > section {
+        max-width: 1600px;
+        margin: 0 auto;
         padding-inline: 16px;
         padding-block: 80px;
         color: $text-color
@@ -484,6 +486,7 @@ main {
             top: 0;
             left: 0;
             width: 35vw;
+            max-width: 700px;
             height: 100%;
             background-color: $primary-light-color;
         }
