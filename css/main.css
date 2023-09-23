@@ -387,10 +387,20 @@ main > .section:nth-child(odd) h2 {
   border-color: #ffb400;
 }
 .about__form #FormExtraDetails {
-  height: 96px;
+  height: 120px;
   overflow-x: unset;
   overflow-y: scroll;
   resize: none;
+}
+.about__form #FormExtraDetails::-webkit-scrollbar-thumb {
+  background-color: #ffb400;
+}
+.about__form #FormExtraDetails::-webkit-scrollbar-track {
+  background-color: #e9e9e9;
+}
+.about__form #FormExtraDetails::-webkit-scrollbar {
+  width: 4px;
+  height: 5px;
 }
 .about__form__terms {
   margin-bottom: 24px;
@@ -566,11 +576,28 @@ main > .section:nth-child(odd) h2 {
   }
 }
 .testimonials__box {
+  width: 100%;
+  display: flex;
   background-color: #ffffff;
   color: #616670;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+}
+.testimonials__box::-webkit-scrollbar-thumb {
+  background-color: #ffb400;
+}
+.testimonials__box::-webkit-scrollbar-track {
+  background-color: #e9e9e9;
+}
+.testimonials__box::-webkit-scrollbar {
+  width: 10px;
+  height: 5px;
 }
 .testimonials__item {
+  scroll-snap-align: start;
   padding: 24px;
+  flex: 0 0 100%;
 }
 .testimonials__person {
   margin-bottom: 24px;

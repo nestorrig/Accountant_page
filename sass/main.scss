@@ -352,10 +352,20 @@ main {
             }
         }
         #FormExtraDetails {
-            height: 96px;
+            height: 120px;
             overflow-x: unset;
             overflow-y: scroll;
             resize: none;
+            &::-webkit-scrollbar-thumb {
+                background-color: $primary-color;
+            }
+            &::-webkit-scrollbar-track {
+                background-color: $secondary-light-color;
+            }
+            &::-webkit-scrollbar {
+                width: 4px;
+                height: 5px;
+            }
         }
         &__terms {
             margin-bottom: 24px;
@@ -496,6 +506,7 @@ main {
         &__box {
             height: fit-content;
             min-width: 450px;
+            // display: flex;
         }
     }
     &__header {
@@ -510,12 +521,28 @@ main {
         }
     }
     &__box {
+        width: 100%;
+        display: flex;
         background-color: $primary-light-color;
         color: $text-color;
+        overflow-x: scroll;
+        overscroll-behavior-x: contain;
+        scroll-snap-type: x mandatory;
+        &::-webkit-scrollbar-thumb {
+            background-color: $primary-color;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $secondary-light-color;
+        }
+        &::-webkit-scrollbar {
+            width: 10px;
+            height: 5px;
+        }
     }
     &__item {
+        scroll-snap-align: start;
         padding: 24px;
-
+        flex: 0 0 100%;
     }
     &__person {
         margin-bottom: 24px;
