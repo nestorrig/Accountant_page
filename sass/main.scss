@@ -442,8 +442,8 @@ main {
         border-right: 1px solid transparent; /* Inicia con un borde transparente */
         animation: cursorBlink 1s step-end infinite; /* Ajusta la duración y el tipo de animación */
         &.complete_sencence {
-            background-color: #0000007c;
-            color: $secondary-light-color;
+            background-color: $terciary-color;
+            color: $text-color;
         }
     }
 }
@@ -709,7 +709,7 @@ main {
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
-                @include svgIcons(20px, $primary-color);
+                @include svgIcons(24px, $primary-color);
                 a {
                     margin-top: 4px;
                     font-weight: 600;
