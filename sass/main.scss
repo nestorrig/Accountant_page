@@ -1,5 +1,6 @@
 $primary-color: #ffb400;
 $secondary-color: #184341;
+$terciary-color: #0e2927;
 $text-color: #616670;
 $secondary-light-color: #e9e9e9;
 $primary-light-color: #ffffff;
@@ -44,6 +45,14 @@ $primary-light-color: #ffffff;
 @keyframes reverseRotateIcon {
     from {transform: rotate(180deg);}
     to {transform: rotate(0deg);}
+}
+@keyframes cursorBlink {
+    0%, 50% {
+        border-right: 1px solid $primary-color;
+    }
+    51%, 100% {
+        border-right: 1px solid transparent;
+    }
 }
 
 // Base styles
@@ -149,13 +158,13 @@ button {
     font-weight: 600;
     cursor: pointer;
     &:hover {
-        background-color: $secondary-color;
+        background-color: $terciary-color;
         color: $primary-light-color;
     }
     &:active {
         transform: scale(.9);
-        transition: all .3s;
     }
+    transition: all .3s;
 }
 
 // Mobile menu
@@ -428,7 +437,14 @@ main {
         }
     }
     #OffersWords {
+        padding-right: 2px;
         color: $primary-color;
+        border-right: 1px solid transparent; /* Inicia con un borde transparente */
+        animation: cursorBlink 1s step-end infinite; /* Ajusta la duración y el tipo de animación */
+        &.complete_sencence {
+            background-color: #0000007c;
+            color: $secondary-light-color;
+        }
     }
 }
 .services {
