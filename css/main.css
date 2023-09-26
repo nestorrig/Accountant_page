@@ -36,6 +36,24 @@
     border-right: 1px solid transparent;
   }
 }
+.brightness {
+  filter: brightness(0.5);
+}
+@media screen and (min-width: 950px) {
+  .brightness {
+    filter: brightness(1);
+  }
+}
+
+.blockIt {
+  pointer-events: none;
+}
+@media screen and (min-width: 950px) {
+  .blockIt {
+    pointer-events: auto;
+  }
+}
+
 .center {
   margin: 0 auto;
   max-width: 1200px;
@@ -245,6 +263,7 @@ button:active {
 }
 .header .iconContainer.in--menu {
   position: fixed;
+  z-index: 1;
   top: 8px;
   right: 8px;
   width: 56px;
@@ -278,6 +297,7 @@ main > section {
   padding-inline: 16px;
   padding-block: 80px;
   color: #616670;
+  background-color: #ffffff;
 }
 main > .section:nth-child(odd) {
   background-color: #184341;
