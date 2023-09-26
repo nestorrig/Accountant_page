@@ -511,6 +511,7 @@ main {
     }
 }
 .testimonials {
+    padding-inline: 24px;
     @include responsive(950px) {
         position: relative;
         > .center {
@@ -532,6 +533,9 @@ main {
         &__header {
             min-width: 450px;
         }
+        &__container {
+            min-width: 450px;
+        }
         &__box {
             height: fit-content;
             min-width: 450px;
@@ -549,6 +553,9 @@ main {
             margin: 0 0 0 auto;
         }
     }
+    &__container {
+        position: relative;
+    }
     &__box {
         width: 100%;
         display: flex;
@@ -559,9 +566,11 @@ main {
         scroll-snap-type: x mandatory;
         &::-webkit-scrollbar-thumb {
             background-color: $primary-color;
+            display: none;
         }
         &::-webkit-scrollbar-track {
             background-color: $secondary-light-color;
+            display: none;
         }
         &::-webkit-scrollbar {
             width: 10px;
@@ -596,6 +605,54 @@ main {
             color: $primary-color;
         }
     }
+    // bulltes
+    .position-indicators {
+        position: absolute;
+        bottom: -40px;
+        right: 50%;
+        transform: translate(50%);
+    }
+    .position-indicator {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin: 0 5px;
+        background-color: $terciary-color;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color .3s;
+    }
+    .position-indicator:first-child {
+        background-color: $primary-color;
+    }
+    .nav-button {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: grid;
+        place-content: center;
+        background-color: $primary-color;
+        path {
+            fill: $secondary-color;
+        }
+        &#prevButton {
+            top: 50%;
+            transform: translate(-50%, -50%);
+            &:active {
+                transform: translate(-50%, -50%) scale(.9);
+            }
+        }
+        &#nextButton {
+            top: 50%;
+            right: 0;
+            transform: translate(50%, -50%) rotate(180deg);
+            &:active {
+                transform: translate(50%, -50%) rotate(180deg) scale(.9);
+            }
+        }
+    }
+
 }
 .faq {
     @include responsive(760px) {

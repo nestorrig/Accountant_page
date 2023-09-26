@@ -569,6 +569,9 @@ main > .section:nth-child(odd) h2 {
   margin-bottom: 24px;
 }
 
+.testimonials {
+  padding-inline: 24px;
+}
 @media screen and (min-width: 950px) {
   .testimonials {
     position: relative;
@@ -592,6 +595,9 @@ main > .section:nth-child(odd) h2 {
   .testimonials__header {
     min-width: 450px;
   }
+  .testimonials__container {
+    min-width: 450px;
+  }
   .testimonials__box {
     height: -moz-fit-content;
     height: fit-content;
@@ -611,6 +617,9 @@ main > .section:nth-child(odd) h2 {
     margin: 0 0 0 auto;
   }
 }
+.testimonials__container {
+  position: relative;
+}
 .testimonials__box {
   width: 100%;
   display: flex;
@@ -622,9 +631,11 @@ main > .section:nth-child(odd) h2 {
 }
 .testimonials__box::-webkit-scrollbar-thumb {
   background-color: #ffb400;
+  display: none;
 }
 .testimonials__box::-webkit-scrollbar-track {
   background-color: #e9e9e9;
+  display: none;
 }
 .testimonials__box::-webkit-scrollbar {
   width: 10px;
@@ -658,6 +669,52 @@ main > .section:nth-child(odd) h2 {
 .testimonials__person__role {
   margin-top: 4px;
   color: #ffb400;
+}
+.testimonials .position-indicators {
+  position: absolute;
+  bottom: -40px;
+  right: 50%;
+  transform: translate(50%);
+}
+.testimonials .position-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #0e2927;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.testimonials .position-indicator:first-child {
+  background-color: #ffb400;
+}
+.testimonials .nav-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background-color: #ffb400;
+}
+.testimonials .nav-button path {
+  fill: #184341;
+}
+.testimonials .nav-button#prevButton {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.testimonials .nav-button#prevButton:active {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+.testimonials .nav-button#nextButton {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%) rotate(180deg);
+}
+.testimonials .nav-button#nextButton:active {
+  transform: translate(50%, -50%) rotate(180deg) scale(0.9);
 }
 
 @media screen and (min-width: 760px) {
