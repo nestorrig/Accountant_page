@@ -722,14 +722,17 @@ main {
     color: $primary-light-color;
     &__box {
         max-width: 800px;
-        padding: 48px 16px;
+        padding: 48px 24px;
         margin: 0 auto;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: center;
         gap: 48px;
-
+        @include responsive(760px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
         .links {
             max-width: 400px;
             &__logo {
@@ -765,14 +768,16 @@ main {
             }
         }
         .contact {
+            width: 100%;
+            max-width: 400px;
             h2 {
                 color: $primary-color;
             }
             &__box {
                 margin-top: 36px;
                 display: flex;
-                flex-direction: column;
-                // flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
                 gap: 24px;
             }
             &__item {
@@ -786,6 +791,21 @@ main {
                     &:hover {
                         color: $primary-color;
                     }
+                }
+            }
+        }
+        @include responsive(760px) {
+            .contact {
+                width: auto;
+                &__box {
+                    flex-direction: column;
+                }
+            }
+        }
+        @include responsive(1000px) {
+            .contact {
+                &__box {
+                    flex-direction: row;
                 }
             }
         }
