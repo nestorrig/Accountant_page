@@ -835,8 +835,9 @@ main > .section:nth-child(odd) h2 {
   place-content: center;
   width: 50px;
   height: 50px;
-  background-color: #ffb400;
+  background-color: #184341;
   border-radius: 100%;
+  transition: all 0.3s;
 }
 .footer__box .links__social a svg {
   min-width: 32px;
@@ -844,13 +845,12 @@ main > .section:nth-child(odd) h2 {
   height: 32px;
 }
 .footer__box .links__social a svg path {
-  fill: #184341;
+  fill: #ffb400;
 }
 .footer__box .links__social a:hover {
-  background-color: #ffffff;
+  background-color: #0e2927;
   border-radius: 16px;
   transform: scale(1.1);
-  transition: all 0.3s;
 }
 .footer__box .contact {
   width: 100%;

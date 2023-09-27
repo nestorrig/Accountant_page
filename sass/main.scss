@@ -757,15 +757,15 @@ main {
                     place-content: center;
                     width: 50px;
                     height: 50px;
-                    background-color: $primary-color;
+                    background-color: $secondary-color;
                     border-radius: 100%;
-                    @include svgIcons(32px, $secondary-color);
+                    @include svgIcons(32px, $primary-color);
                     &:hover {
-                        background-color: $primary-light-color;
+                        background-color: $terciary-color;
                         border-radius: 16px;
                         transform: scale(1.1);
-                        transition: all .3s;
                     }
+                    transition: all .3s;
                 }
             }
         }
