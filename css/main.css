@@ -596,12 +596,12 @@ main > .section:nth-child(odd) h2 {
     min-width: 450px;
   }
   .testimonials__container {
-    min-width: 450px;
+    min-width: 410px;
   }
   .testimonials__box {
     height: -moz-fit-content;
     height: fit-content;
-    min-width: 450px;
+    min-width: 410px;
   }
 }
 .testimonials__header {
@@ -691,15 +691,20 @@ main > .section:nth-child(odd) h2 {
 }
 .testimonials .nav-button {
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   display: grid;
   place-content: center;
   background-color: #ffb400;
 }
-.testimonials .nav-button path {
-  fill: #184341;
+.testimonials .nav-button svg {
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+}
+.testimonials .nav-button svg path {
+  fill: #0e2927;
 }
 .testimonials .nav-button#prevButton {
   top: 50%;
@@ -715,6 +720,10 @@ main > .section:nth-child(odd) h2 {
 }
 .testimonials .nav-button#nextButton:active {
   transform: translate(50%, -50%) rotate(180deg) scale(0.9);
+}
+.testimonials .nav-button.disable_button {
+  filter: brightness(0.8);
+  cursor: not-allowed;
 }
 
 @media screen and (min-width: 760px) {

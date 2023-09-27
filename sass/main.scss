@@ -534,11 +534,11 @@ main {
             min-width: 450px;
         }
         &__container {
-            min-width: 450px;
+            min-width: 410px;
         }
         &__box {
             height: fit-content;
-            min-width: 450px;
+            min-width: 410px;
             // display: flex;
         }
     }
@@ -627,15 +627,13 @@ main {
     }
     .nav-button {
         position: absolute;
-        width: 30px;
-        height: 30px;
+        width: 24px;
+        height: 24px;
         border-radius: 50%;
         display: grid;
         place-content: center;
         background-color: $primary-color;
-        path {
-            fill: $secondary-color;
-        }
+        @include svgIcons(20px, $terciary-color);
         &#prevButton {
             top: 50%;
             transform: translate(-50%, -50%);
@@ -650,6 +648,10 @@ main {
             &:active {
                 transform: translate(50%, -50%) rotate(180deg) scale(.9);
             }
+        }
+        &.disable_button {
+            filter: brightness(.8);
+            cursor: not-allowed;
         }
     }
 
