@@ -173,15 +173,15 @@
                         </h2>
                     </article>
                     <form name="contact" method="POST" data-netlify="true">
-                        <input name="name" class="about__form__input" type="text" placeholder="Tu nombre" autocomplete="name" required id="FormName">
-                        <input name="email" class="about__form__input" type="email" placeholder="Correo" autocomplete="email" required id="FormEmail">
-                        <input name="phone" class="about__form__input" type="tel" placeholder="Telefono" autocomplete="tel" required id="FormPhone">
-                        <!-- <input class="about__form__input" type="text" placeholder="Detalles adicionales" required id="FormExtraDetails"> -->
+                        <input name="name" class="about__form__input" type="text" placeholder="Tu nombre" autocomplete="name" required id="FormName" pattern="[A-Za-z\s'-]+">
+                        <input name="email" class="about__form__input" type="email" placeholder="Correo" autocomplete="email" required id="FormEmail"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
+                        <input name="phone" class="about__form__input" type="tel" placeholder="Telefono: (55) 1234-5678" autocomplete="tel" required id="FormPhone" pattern="\(\d{2}\) \d{4}-\d{4}">
                         <textarea name="More details" class="about__form__input" placeholder="Detalles adicionales" cols="30" rows="10" id="FormExtraDetails"></textarea>
                         <label class="about__form__terms" for="FormCheckbox">
                             <input name="terms and conditions" class="about__form__input" type="checkbox" required id="FormCheckbox">
                             <p>Estoy de acuerdo con los <a href="#" target="_blank" rel="noopener noreferrer">Terminos y condiciones</a>.</p>
                         </label>
+                        <div data-netlify-recaptcha="true"></div>
                         <button type="submit">Obten una cotizacion</button>
                     </form>
                 </div>
