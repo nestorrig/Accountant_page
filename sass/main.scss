@@ -349,9 +349,13 @@ main {
         -webkit-box-shadow: 1px 1px 10px -1px $text-color;
         -moz-box-shadow: 1px 1px 10px -1px $text-color;
         background-color: $primary-light-color;
+        @include responsive(850px) {
+            max-width: 450px;
+            margin-top: -160px;
+        }
         @include responsive(1000px) {
             max-width: 450px;
-            margin-top: -100px;
+            margin-top: -120px;
         }
 
         &__input {
@@ -407,6 +411,9 @@ main {
             a {
                 color: $primary-color;
             }
+        }
+        button[type="submit"] {
+            margin-top: 24px;
         }
     }
 

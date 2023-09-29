@@ -388,10 +388,16 @@ main > .section:nth-child(odd) h2 {
   -moz-box-shadow: 1px 1px 10px -1px #616670;
   background-color: #ffffff;
 }
+@media screen and (min-width: 850px) {
+  .about__form {
+    max-width: 450px;
+    margin-top: -160px;
+  }
+}
 @media screen and (min-width: 1000px) {
   .about__form {
     max-width: 450px;
-    margin-top: -100px;
+    margin-top: -120px;
   }
 }
 .about__form__input {
@@ -449,6 +455,9 @@ main > .section:nth-child(odd) h2 {
 }
 .about__form__terms a {
   color: #ffb400;
+}
+.about__form button[type=submit] {
+  margin-top: 24px;
 }
 .about__roles {
   flex-direction: column;
