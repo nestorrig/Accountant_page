@@ -18,7 +18,7 @@ $primary-light-color: #ffffff;
         height: $size;
         path {
             fill: $color;
-        }
+        }   
     }
 }
 @mixin responsive($width){
@@ -282,16 +282,17 @@ main {
 }
 .home {
     @extend .image;
-    background-image: url(https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg);
+    background-position: left;
+    background-image: url(https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
     padding-block: 100px;
     color: $primary-light-color;
     @include responsive(1200px) {
-        height: 800px;
+        height: 100vh;
     }
     &__info {
-        margin-top: 150px;
+        margin-top: 120px;
         @include responsive(950px) {
-            padding-left: 600px;
+            padding-right: 600px;
             margin-top: 200px;
         }
         h2 {

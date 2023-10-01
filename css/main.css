@@ -308,21 +308,22 @@ main > .section:nth-child(odd) h2 {
 }
 
 .home {
-  background-image: url(https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg);
+  background-position: left;
+  background-image: url(https://images.pexels.com/photos/7821702/pexels-photo-7821702.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   padding-block: 100px;
   color: #ffffff;
 }
 @media screen and (min-width: 1200px) {
   .home {
-    height: 800px;
+    height: 100vh;
   }
 }
 .home__info {
-  margin-top: 150px;
+  margin-top: 120px;
 }
 @media screen and (min-width: 950px) {
   .home__info {
-    padding-left: 600px;
+    padding-right: 600px;
     margin-top: 200px;
   }
 }
