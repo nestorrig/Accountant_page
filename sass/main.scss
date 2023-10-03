@@ -322,6 +322,7 @@ main {
             flex-wrap: nowrap;
         }
         h3 {
+            margin-top: 56px;
             margin-bottom: 24px;
         }
     }
@@ -330,7 +331,7 @@ main {
     }
     &__check {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(196px, 1fr));
         gap: 8px 16px;
         &__item {
             margin-bottom: 16px;
@@ -350,14 +351,6 @@ main {
         -webkit-box-shadow: 1px 1px 10px -1px $text-color;
         -moz-box-shadow: 1px 1px 10px -1px $text-color;
         background-color: $primary-light-color;
-        @include responsive(850px) {
-            max-width: 450px;
-            margin-top: -160px;
-        }
-        @include responsive(1000px) {
-            max-width: 450px;
-            margin-top: -120px;
-        }
 
         &__input {
             padding: 8px 16px;
@@ -415,6 +408,19 @@ main {
         }
         button[type="submit"] {
             margin-top: 24px;
+        }
+        // Responsive
+        @include responsive(850px) {
+            max-width: 450px;
+            margin-top: -20vw;
+            padding: 32px 36px;
+            &__input {
+                margin-bottom: 36px;
+                height: 56px;
+            }
+        }
+        @include responsive(1500px) {
+            margin-top: -300px;
         }
     }
 
@@ -572,17 +578,9 @@ main {
         overflow-x: scroll;
         overscroll-behavior-x: contain;
         scroll-snap-type: x mandatory;
-        &::-webkit-scrollbar-thumb {
-            background-color: $primary-color;
-            display: none;
-        }
-        &::-webkit-scrollbar-track {
-            background-color: $secondary-light-color;
-            display: none;
-        }
+        scrollbar-width: none;
         &::-webkit-scrollbar {
-            width: 10px;
-            height: 5px;
+            display: none;
         }
     }
     &__item {
@@ -635,6 +633,7 @@ main {
     }
     .nav-button {
         position: absolute;
+        padding: 16px;
         width: 24px;
         height: 24px;
         border-radius: 50%;
