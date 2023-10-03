@@ -342,7 +342,7 @@ main > .section:nth-child(odd) h2 {
 }
 
 .about > div {
-  margin-bottom: 48px;
+  margin-bottom: 0px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -353,11 +353,15 @@ main > .section:nth-child(odd) h2 {
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: nowrap;
+    align-items: start;
   }
 }
-.about > div h3 {
+.about > div h3.--uppercase {
   margin-top: 56px;
   margin-bottom: 24px;
+}
+.about > div:first-child {
+  margin-bottom: 80px;
 }
 .about .about__info {
   max-width: 700px;

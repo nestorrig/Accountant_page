@@ -312,7 +312,7 @@ main {
 }
 .about {
     > div {
-        margin-bottom: 48px;
+        margin-bottom: 0px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -322,11 +322,15 @@ main {
             justify-content: space-between;
             flex-direction: row;
             flex-wrap: nowrap;
+            align-items: start;
         }
-        h3 {
+        h3.--uppercase {
             margin-top: 56px;
             margin-bottom: 24px;
         }
+    }
+    > div:first-child {
+        margin-bottom: 80px;
     }
     .about__info {
         max-width: 700px;
