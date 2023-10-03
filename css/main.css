@@ -316,14 +316,16 @@ main > .section:nth-child(odd) h2 {
 @media screen and (min-width: 1200px) {
   .home {
     height: 100vh;
+    background-position: top center;
   }
 }
 .home__info {
   margin-top: 120px;
+  text-wrap: balance;
 }
-@media screen and (min-width: 950px) {
+@media screen and (min-width: 750px) {
   .home__info {
-    padding-right: 600px;
+    padding-right: 35vw;
     margin-top: 200px;
   }
 }
@@ -448,6 +450,11 @@ main > .section:nth-child(odd) h2 {
 }
 .about__form button[type=submit] {
   margin-top: 24px;
+}
+@media screen and (min-width: 768px) {
+  .about__form {
+    margin-top: -12vw;
+  }
 }
 @media screen and (min-width: 850px) {
   .about__form {

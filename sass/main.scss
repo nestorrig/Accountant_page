@@ -288,11 +288,13 @@ main {
     color: $primary-light-color;
     @include responsive(1200px) {
         height: 100vh;
+        background-position: top center;
     }
     &__info {
         margin-top: 120px;
-        @include responsive(950px) {
-            padding-right: 600px;
+        text-wrap: balance;
+        @include responsive(750px) {
+            padding-right: 35vw;
             margin-top: 200px;
         }
         h2 {
@@ -410,6 +412,9 @@ main {
             margin-top: 24px;
         }
         // Responsive
+        @include responsive(768px) {
+            margin-top: -12vw;
+        }
         @include responsive(850px) {
             max-width: 450px;
             margin-top: -20vw;
