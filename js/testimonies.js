@@ -18,21 +18,6 @@ positionIndicatorElements.forEach((indicator, index) => {
     scrollToIndex(index);
     });
 });
-function validButton() {
-    prevButton.disabled = false
-    prevButton.classList.remove('disable_button')
-    nextButton.disabled = false
-    nextButton.classList.remove('disable_button')
-    if (currentIndex === 0) {
-        prevButton.disabled = true
-        prevButton.classList.add('disable_button')
-    }
-    if (currentIndex === positionIndicatorElements.length - 1) {
-        nextButton.disabled = true
-        nextButton.classList.add('disable_button')
-    }
-}
-validButton()
 prevButton.addEventListener('click', () => {
     scrollToIndex(currentIndex - 1);
 });
@@ -42,10 +27,22 @@ nextButton.addEventListener('click', () => {
 });
 
 function scrollToIndex(index) {
+    // dentro del rango
     if (index >= 0 && index < positionIndicatorElements.length) {
-    currentIndex = index;
-    const scrollDistance = index * testimonialsBox.clientWidth;
-    testimonialsBox.scrollLeft = scrollDistance;
+        currentIndex = index;
+        const scrollDistance = index * testimonialsBox.clientWidth;
+        testimonialsBox.scrollLeft = scrollDistance;
+    }
+    // va al final
+    if (index < 0) {
+        currentIndex = positionIndicatorElements.length - 1
+        const scrollDistance = positionIndicatorElements.length * testimonialsBox.clientWidth;
+        testimonialsBox.scrollLeft = scrollDistance;
+    }
+    // regresa al inicio
+    if (index === positionIndicatorElements.length) {
+        currentIndex = 0
+        testimonialsBox.scrollLeft = 0;
     }
 }
 
@@ -57,7 +54,6 @@ testimonialsBox.addEventListener('scroll', () => {
         if (scrollLeft >= indicatorPosition && scrollLeft < indicatorPosition + testimonialsBox.clientWidth) {
             indicator.style.backgroundColor = '#ffb400';
             currentIndex = index
-            validButton()
         } else {
             indicator.style.backgroundColor = '#0e2927';
         }

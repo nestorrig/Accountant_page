@@ -665,10 +665,6 @@ main {
                 transform: translate(50%, -50%) rotate(180deg) scale(.9);
             }
         }
-        &.disable_button {
-            filter: brightness(.8);
-            cursor: not-allowed;
-        }
     }
 
 }

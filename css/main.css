@@ -740,10 +740,6 @@ main > .section:nth-child(odd) h2 {
 .testimonials .nav-button#nextButton:active {
   transform: translate(50%, -50%) rotate(180deg) scale(0.9);
 }
-.testimonials .nav-button.disable_button {
-  filter: brightness(0.8);
-  cursor: not-allowed;
-}
 
 @media screen and (min-width: 760px) {
   .faq {
