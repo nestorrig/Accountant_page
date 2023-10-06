@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="./assets/logos/favicon.png"/>
 
     <title>Christopher Emmanuel</title>
 </head>
@@ -41,7 +42,9 @@
             <a href="#Testimonials">Testimonios</a>
             <a href="#Faq">Preguntas Frecuentes</a>
             <a href="#Contact">Contacto</a>
-            <button type="button">Haz una cita</button>
+            <!-- <button type="button">
+                <a href="#Form">Haz una cita</a>
+            </button> -->
         </nav>
         <figure id="MenuButtons" class="iconContainer in--menu" >
             <svg id="OpenMenu" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
@@ -58,15 +61,15 @@
         <section class="home section" id="Home">
             <article class="home__info center">
                 <h2 class="--uppercase">
-                    Soy contador experto en impuestos
+                    Christopher Emmanuel: Tu Experto en Impuestos en México
                 </h2>
                 <h1 class="title">
-                    Necesitas ayuda con tus impuestos
+                    ¿Necesitas Asesoría Profesional en Impuestos?
                 </h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptates dolores ipsam nam. Rerum, eos praesentium aspernatur modi inventore facere
+                    ¡Bienvenido a la firma de contabilidad de Christopher Emmanuel! Brindamos soluciones financieras confiables y asesoría experta en impuestos en México. Descubre cómo podemos ayudarte a alcanzar tus objetivos financieros."
                 </p>
-                <button type="button">Iniciemos</button>
+                <!-- <button type="button">Iniciemos</button> -->
             </article>
         </section>
 
@@ -75,15 +78,15 @@
                 <div class="about__info">
                     <article class="section__header about__header">
                         <h3 class="--uppercase">
-                            Bienvenido a mi pagina
+                            Bienvenido a mi página
                         </h3>
                         <h2>
-                            Asesoria y gestion de las areas finaciera, admisnistrativa y fiscal
+                            Asesoría y Gestión en Áreas Financiera, Administrativa y Fiscal
                         </h2>
                         <div class="section__header--line"></div>
                     </article>
                     <p>
-                        Nuestra mision es optimizar, plaear y dessarrollar estrategias que ayuden a mejorar la forma en que se presenta la informacion y de este modo se tomen, mejores desiciones que ayuden a obtener una estabilidad y mejoria en su empresa
+                        Como contador, mi misión es optimizar, planear y desarrollar estrategias que mejoren la presentación de la información financiera, administrativa y fiscal, permitiendo así la toma de decisiones más acertadas. Trabajo incansablemente para brindarte la estabilidad y el crecimiento que tu empresa merece.
                     </p>
                     <h3 class="--uppercase">
                         Nuestros valores
@@ -172,7 +175,7 @@
                             Atendemos tus dudas
                         </h2>
                     </article>
-                    <form name="contact" method="POST" data-netlify="true">
+                    <form name="contact" method="POST" data-netlify="true" id="Form">
                         <input name="name" class="about__form__input" type="text" placeholder="Tu nombre" autocomplete="name" required id="FormName" pattern="[A-Za-z\s'-]+">
                         <input name="email" class="about__form__input" type="email" placeholder="Correo" autocomplete="email" required id="FormEmail"  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}">
                         <input name="phone" class="about__form__input" type="tel" placeholder="Telefono: (55) 1234-5678" autocomplete="tel" required id="FormPhone" pattern="\(\d{2}\) \d{4}-\d{4}">
@@ -195,10 +198,10 @@
                     </figure>
                     <article>
                         <h3>
-                            Consulta de impuestos
+                            Llevar registros financieros
                         </h3>
                         <p>
-                        Revision y Actualizacion de su situacion fiscal actual
+                            Como contador, mi labor principal implica llevar registros financieros precisos y detallados de todas las transacciones de tu empresa. Cuido minuciosamente cada entrada para proporcionarte una visión clara y confiable de tu situación financiera.
                         </p>
                     </article>
                 </div>
@@ -210,10 +213,10 @@
                     </figure>
                     <article>
                         <h3>
-                            Analisis de la situacion financiera
+                            Auditoría interna y externa 
                         </h3>
                         <p>
-                            Diagnostico de la informacion financiera, revision y actualizacion de la misma
+                            También desempeño un papel esencial en la auditoría, tanto interna como externa. A través de auditorías internas, evalúo y mejoro los procesos financieros internos de tu empresa. Además, en auditorías externas, garantizo la exactitud de tus estados financieros para cumplir con las normativas y estándares.
                         </p>
                     </article>
                 </div>
@@ -227,10 +230,10 @@
                     </figure>
                     <article>
                         <h3>
-                            Planeacion de procesos internos
+                            Asesoramiento financiero 
                         </h3>
                         <p>
-                            Estudio de estartegias que impulsen la automatizacion de sus procesos administrativos y operativos
+                            Mi compromiso es brindarte un asesoramiento financiero sólido. Trabajo contigo para identificar estrategias fiscales eficientes que minimicen los impuestos y cumplir con las regulaciones fiscales. Juntos, tomaremos decisiones informadas sobre inversiones, presupuestos y gestión financiera.
                         </p>
                     </article>
                 </div>
@@ -244,9 +247,11 @@
                         Ofrecemos diversos planes para <span id="OffersWords"></span>
                     </h2>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique modi dignissimos cupiditate. Quia quae non consequuntur architecto porro, velit ullam.
+                        En mi firma, Christopher Emmanuel, ofrezco una amplia gama de servicios contables y financieros personalizados. Desde contabilidad general hasta asesoría fiscal y consultoría contable, te ayudo a alcanzar tus objetivos financieros y cumplir con tus obligaciones fiscales. Descubre cómo puedo marcar la diferencia en tu empresa o situación financiera.
                     </p>
-                    <button>Aprende más</button>
+                    <button>
+                        <a href="#Services">Aprende más</a>
+                    </button>
                 </article>
                 <img src="https://www.generacionuniversitaria.com.mx/wp-content/uploads/2022/06/Contador-1024x631.jpg" alt="">
             </div>
@@ -255,29 +260,55 @@
         <section class="services section" id="Services">
             <article class="section__header services__header">
                 <h3 class="--uppercase">
-                    Mis servicios
+                    Que te ofrezco
                 </h3>
                 <h2>
-                    Que es lo que te ofrezco
+                    Experiencia y Compromiso: Descubre Mis Servicios
                 </h2>
                 <div class="section__header--line"></div>
             </article>
             <p>
-                Ofrecemos un servicio de calidad actualizado y etico en base a conocimientos confiables y actualizados
+                te garantizo un servicio de calidad respaldado por mis conocimientos confiables y actualizados. Mi compromiso ético y mi dedicación a la excelencia aseguran que obtendrás soluciones financieras y contables personalizadas que se adaptan a tus necesidades. Conoce más sobre los servicios que ofrezco a continuación:
             </p>
             <div class="services__box center">
                 <div class="services__item">
                     <figure>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                            <path fill="#ffb400" d="M14.005 2.003a8 8 0 0 1 3.292 15.293A8 8 0 1 1 6.711 6.71a8.003 8.003 0 0 1 7.294-4.707Zm-4 6a6 6 0 1 0 0 12a6 6 0 0 0 0-12Zm1 1v1h2v2h-4a.5.5 0 0 0-.09.992l.09.008h2a2.5 2.5 0 0 1 0 5v1h-2v-1h-2v-2h4a.5.5 0 0 0 .09-.992l-.09-.008h-2a2.5 2.5 0 0 1 0-5v-1h2Zm3-5A5.985 5.985 0 0 0 9.52 6.016a8 8 0 0 1 8.47 8.471a6 6 0 0 0-3.986-10.484Z"></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
+                            <path fill="#ffb400" d="M41 1H9C6.8 1 5 2.8 5 5v40c0 2.2 1.8 4 4 4h32c2.2 0 4-1.8 4-4V5c0-2.2-1.8-4-4-4zM17 41c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm12 16c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm12 16c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-9c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2h28c1.1 0 2 .9 2 2v8z"></path>
                         </svg>
                     </figure>
                     <article>
                         <h2 class="--card">
-                            Pago de impuestos
+                            Contabilidad General
                         </h2>
                         <p>
-                            Calculo y presentacion de los impuestos e informativas dependiendo de sus obligaciones fiscales
+                            La contabilidad general es un proceso esencial en el ámbito financiero, que implica el registro detallado y preciso de todas las transacciones financieras de una empresa. Este proceso garantiza un control riguroso de los registros financieros y asegura el cumplimiento de las regulaciones contables y fiscales pertinentes.
+                        </p>
+                    </article>
+                </div>
+                <div class="services__item">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="#ffb400" fill-rule="evenodd" d="M12 2.75A9.25 9.25 0 0 0 2.75 12c0 1.481.348 2.879.965 4.118c.248.498.343 1.092.187 1.677l-.596 2.225a.55.55 0 0 0 .673.674l2.227-.596a2.383 2.383 0 0 1 1.676.187A9.208 9.208 0 0 0 12 21.25a9.25 9.25 0 0 0 0-18.5ZM1.25 12C1.25 6.063 6.063 1.25 12 1.25S22.75 6.063 22.75 12S17.937 22.75 12 22.75c-1.718 0-3.344-.404-4.787-1.122a.885.885 0 0 0-.62-.08l-2.226.595c-1.524.408-2.918-.986-2.51-2.51l.596-2.226a.885.885 0 0 0-.08-.62A10.709 10.709 0 0 1 1.25 12ZM12 7.25a.75.75 0 0 1 .75.75v.01c1.089.275 2 1.133 2 2.323a.75.75 0 0 1-1.5 0c0-.384-.426-.916-1.25-.916c-.824 0-1.25.532-1.25.916s.426.917 1.25.917c1.385 0 2.75.96 2.75 2.417c0 1.19-.911 2.049-2 2.323V16a.75.75 0 0 1-1.5 0v-.01c-1.089-.274-2-1.133-2-2.323a.75.75 0 0 1 1.5 0c0 .384.426.916 1.25.916c.824 0 1.25-.532 1.25-.916s-.426-.917-1.25-.917c-1.385 0-2.75-.96-2.75-2.417c0-1.19.911-2.048 2-2.323V8a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd"></path></svg>
+                    </figure>
+                    <article>
+                        <h2 class="--card">
+                            Asesoría Fiscal 
+                        </h2>
+                        <p>
+                            La asesoría fiscal es un servicio especializado que ofrece orientación y estrategias fiscales personalizadas. Los asesores fiscales colaboran estrechamente con individuos y empresas para planificar eficazmente sus obligaciones fiscales, presentar declaraciones de impuestos precisas y minimizar su carga tributaria de acuerdo con la legislación fiscal vigente.
+                        </p>
+                    </article>
+                </div>
+                <div class="services__item">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><g fill="#ffb400"><path fill-rule="evenodd" d="M17 5H7a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1ZM7 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V6a3 3 0 0 0-3-3H7Z" clip-rule="evenodd"></path><path d="M8 7h8v2H8V7Zm0 4h8v2H8v-2Zm0 4h5v2H8v-2Z"></path></g></svg>
+                    </figure>
+                    <article>
+                        <h2 class="--card">
+                            Auditoría
+                        </h2>
+                        <p>
+                            La auditoría es un proceso crucial que abarca auditorías internas y externas. Las auditorías internas se centran en evaluar y mejorar los procesos financieros internos de una organización, mientras que las auditorías externas aseguran la precisión de los estados financieros y garantizan el cumplimiento normativo.
                         </p>
                     </article>
                 </div>
@@ -289,10 +320,66 @@
                     </figure>
                     <article>
                         <h2 class="--card">
-                            Impuesto Sobre Nomina
+                            Gestión de Nómina
                         </h2>
                         <p>
-                            Calculo y presentacion sobre el Impuesto Sobre Nomina (ISN), cumpliendo las normativas del estado correspondiente
+                            La gestión de nómina involucra la administración de la remuneración de los empleados, incluyendo el cálculo de salarios, retenciones de impuestos y el cumplimiento de regulaciones laborales. Este servicio garantiza la correcta remuneración de los trabajadores y el cumplimiento de las obligaciones fiscales y legales.
+                        </p>
+                    </article>
+                </div>
+                <div class="services__item">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 16 16"><path fill="#ffb400" d="m7.603 13.267l-.215.707C4.619 13.729 3 11.84 3 10v-.5A1.5 1.5 0 0 1 4.5 8h4.54c-.39.275-.733.613-1.012 1H4.5a.5.5 0 0 0-.5.5v.5c0 1.338 1.241 2.785 3.484 2.978c.036.098.076.195.119.29ZM8 1.5A2.75 2.75 0 1 1 8 7a2.75 2.75 0 0 1 0-5.5Zm0 1A1.75 1.75 0 1 0 8 6a1.75 1.75 0 0 0 0-3.5Zm7 9a3.5 3.5 0 0 1-5.197 3.062l-1.392.423a.318.318 0 0 1-.397-.397l.424-1.391A3.5 3.5 0 1 1 15 11.5ZM10.5 10a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2Zm-.5 2.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0-.5.5Z"></path></svg>
+                    </figure>
+                    <article>
+                        <h2 class="--card">
+                            Asesoramiento Financiero Personal
+                        </h2>
+                        <p>
+                            El asesoramiento financiero personal es un servicio dirigido a individuos en busca de orientación en asuntos financieros. Los asesores financieros colaboran estrechamente con los clientes para abordar cuestiones como la planificación de jubilación, inversiones, gestión de deudas y otros aspectos de sus finanzas personales.
+                        </p>
+                    </article>
+                </div>
+                <div class="services__item">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 28 28"><path fill="#ffb400" d="M2.004 7.25A3.25 3.25 0 0 1 5.254 4h17.497a3.25 3.25 0 0 1 3.25 3.25v13.5a3.25 3.25 0 0 1-3.25 3.25h-8.276l-1.5-1.5h9.776a1.75 1.75 0 0 0 1.75-1.75V7.25a1.75 1.75 0 0 0-1.75-1.75H5.254a1.75 1.75 0 0 0-1.75 1.75v5.48c-.55.287-1.055.65-1.5 1.075V7.25Zm9.62 7.25A6.534 6.534 0 0 0 9.966 13H20.25a.75.75 0 0 1 0 1.5h-8.626Zm1.376 4h5.25a.75.75 0 0 0 0-1.5h-5.424c.114.482.174.984.174 1.5ZM7 9.75A.75.75 0 0 1 7.75 9h7.5a.75.75 0 0 1 0 1.5h-7.5A.75.75 0 0 1 7 9.75Zm3.883 12.073a5.5 5.5 0 1 0-1.06 1.06l2.897 2.897a.75.75 0 1 0 1.06-1.06l-2.897-2.897ZM10.5 18.5a4 4 0 1 1-8 0a4 4 0 0 1 8 0Z"></path></svg>
+                    </figure>
+                    <article>
+                        <h2 class="--card">
+                            Consultoría Contable
+                        </h2>
+                        <p>
+                            La consultoría contable es un servicio especializado que proporciona soluciones adaptadas a desafíos específicos en el ámbito contable. Esto puede incluir la implementación de sistemas contables, la reestructuración financiera y la mejora de los procesos financieros internos de una empresa.
+                        </p>
+                    </article>
+                </div>
+                <div class="services__item">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#ffb400" d="M5 21q-.825 0-1.413-.588T3 19V4q0-.425.288-.713T4 3q.425 0 .713.288T5 4v15h15q.425 0 .713.288T21 20q0 .425-.288.713T20 21H5Zm2-3q-.425 0-.713-.288T6 17v-7q0-.425.288-.713T7 9h2q.425 0 .713.288T10 10v7q0 .425-.288.713T9 18H7Zm5 0q-.425 0-.713-.288T11 17V5q0-.425.288-.713T12 4h2q.425 0 .713.288T15 5v12q0 .425-.288.713T14 18h-2Zm5 0q-.425 0-.713-.288T16 17v-3q0-.425.288-.713T17 13h2q.425 0 .713.288T20 14v3q0 .425-.288.713T19 18h-2Z"></path>
+                        </svg>
+                    </figure>
+                    <article>
+                        <h2 class="--card">
+                            Análisis Financiero
+                        </h2>
+                        <p>
+                            El análisis financiero es un proceso fundamental que implica la evaluación de datos financieros para comprender el rendimiento de una empresa. Esto incluye el análisis de tendencias, proyecciones y recomendaciones para respaldar decisiones estratégicas y financieras informadas.
+                        </p>
+                    </article>
+                </div>
+                <div class="services__item">
+                    <figure>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                            <path fill="#ffb400" d="M14.005 2.003a8 8 0 0 1 3.292 15.293A8 8 0 1 1 6.711 6.71a8.003 8.003 0 0 1 7.294-4.707Zm-4 6a6 6 0 1 0 0 12a6 6 0 0 0 0-12Zm1 1v1h2v2h-4a.5.5 0 0 0-.09.992l.09.008h2a2.5 2.5 0 0 1 0 5v1h-2v-1h-2v-2h4a.5.5 0 0 0 .09-.992l-.09-.008h-2a2.5 2.5 0 0 1 0-5v-1h2Zm3-5A5.985 5.985 0 0 0 9.52 6.016a8 8 0 0 1 8.47 8.471a6 6 0 0 0-3.986-10.484Z"></path>
+                        </svg>
+                    </figure>
+                    <article>
+                        <h2 class="--card">
+                            Gestión de Impuestos Corporativos 
+                        </h2>
+                        <p>
+                            La gestión de impuestos corporativos es un servicio que abarca la planificación fiscal y la presentación de declaraciones fiscales para empresas. Los profesionales fiscales trabajan para minimizar la carga tributaria y garantizar el cumplimiento de las regulaciones fiscales vigentes.
                         </p>
                     </article>
                 </div>
@@ -306,56 +393,10 @@
                     </figure>
                     <article>
                         <h2 class="--card">
-                            Alta en IMSS
+                            Gestión de Riesgos Financieros
                         </h2>
                         <p>
-                            Movimientos en el portal IDSE-SUA y nomina
-                        </p>
-                    </article>
-                </div>
-                <div class="services__item">
-                    <figure>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                            <path fill="#ffb400" d="M15.75 13a.75.75 0 0 0-.75-.75H9a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 .75-.75Zm0 4a.75.75 0 0 0-.75-.75H9a.75.75 0 0 0 0 1.5h6a.75.75 0 0 0 .75-.75Z"></path>
-                            <path fill="#ffb400" fill-rule="evenodd" d="M7 2.25A2.75 2.75 0 0 0 4.25 5v14A2.75 2.75 0 0 0 7 21.75h10A2.75 2.75 0 0 0 19.75 19V7.968c0-.381-.124-.751-.354-1.055l-2.998-3.968a1.75 1.75 0 0 0-1.396-.695H7ZM5.75 5c0-.69.56-1.25 1.25-1.25h7.25v4.397c0 .414.336.75.75.75h3.25V19c0 .69-.56 1.25-1.25 1.25H7c-.69 0-1.25-.56-1.25-1.25V5Z" clip-rule="evenodd"></path>
-                        </svg>
-                    </figure>
-                    <article>
-                        <h2 class="--card">
-                            Dictamen Estatal
-                        </h2>
-                        <p>
-                            Presentacion y revision del Impuesto Sobre Nomina (ISN) ante el estado correspondiente, en caso de estar obligado al mismo
-                        </p>
-                    </article>
-                </div>
-                <div class="services__item">
-                    <figure>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                            <path fill="#ffb400" d="M5 21q-.825 0-1.413-.588T3 19V4q0-.425.288-.713T4 3q.425 0 .713.288T5 4v15h15q.425 0 .713.288T21 20q0 .425-.288.713T20 21H5Zm2-3q-.425 0-.713-.288T6 17v-7q0-.425.288-.713T7 9h2q.425 0 .713.288T10 10v7q0 .425-.288.713T9 18H7Zm5 0q-.425 0-.713-.288T11 17V5q0-.425.288-.713T12 4h2q.425 0 .713.288T15 5v12q0 .425-.288.713T14 18h-2Zm5 0q-.425 0-.713-.288T16 17v-3q0-.425.288-.713T17 13h2q.425 0 .713.288T20 14v3q0 .425-.288.713T19 18h-2Z"></path>
-                        </svg>
-                    </figure>
-                    <article>
-                        <h2 class="--card">
-                            Asesoria fiscal financiera
-                        </h2>
-                        <p>
-                            Asesoramos en temas especificos: CFDI, Calculo de ISR e IVA, informacion finaciera
-                        </p>
-                    </article>
-                </div>
-                <div class="services__item">
-                    <figure>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
-                            <path fill="#ffb400" d="M41 1H9C6.8 1 5 2.8 5 5v40c0 2.2 1.8 4 4 4h32c2.2 0 4-1.8 4-4V5c0-2.2-1.8-4-4-4zM17 41c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm12 16c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm12 16c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-8c0 1.1-.9 2-2 2h-4c-1.1 0-2-.9-2-2v-1c0-1.1.9-2 2-2h4c1.1 0 2 .9 2 2v1zm0-9c0 1.1-.9 2-2 2H11c-1.1 0-2-.9-2-2V8c0-1.1.9-2 2-2h28c1.1 0 2 .9 2 2v8z"></path>
-                        </svg>
-                    </figure>
-                    <article>
-                        <h2 class="--card">
-                            Contabilidad
-                        </h2>
-                        <p>
-                            Registro de las operaciones que afectan a la empresa y analisis finacieros
+                            La gestión de riesgos financieros es un proceso esencial que involucra la identificación y la evaluación de riesgos financieros en una organización. Los profesionales en esta área desarrollan estrategias para mitigar los riesgos y proteger los activos de la empresa
                         </p>
                     </article>
                 </div>
@@ -405,11 +446,11 @@
                         Testimonios
                     </h3>
                     <h2>
-                        Que es lo que dicen nuestros clientes y colegas
+                        Lo que dicen nuestros clientes y colegas
                     </h2>
                     <div class="section__header--line"></div>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rerum dolor nemo dolorem, fuga amet non, in ipsum sequi possimus quisquam sapiente optio iure atque pariatur voluptatibus quos itaque laborum.
+                        Mi dedicación a la excelencia se refleja en las palabras de quienes me conocen mejor. Escucha lo que mis clientes y colegas tienen que decir sobre mis servicios contables y financieros de primera clase.
                     </p>
                 </article>
                 <div class="testimonials__container">
@@ -417,7 +458,7 @@
                         <div class="testimonials__item">
                             <div class="testimonials__person">
                                 <figure>
-                                    <img src="https://www.looper.com/img/gallery/the-accountant-2-release-date-cast-and-more/l-intro-1681423544.jpg" alt="">
+                                    <img src="https://images.pexels.com/photos/5490276/pexels-photo-5490276.jpeg" alt="Person photo">
                                 </figure>
                                 <article>
                                     <strong class="testimonials__person__name">
@@ -437,7 +478,7 @@
                         <div class="testimonials__item">
                             <div class="testimonials__person">
                                 <figure>
-                                    <img src="https://www.looper.com/img/gallery/the-accountant-2-release-date-cast-and-more/l-intro-1681423544.jpg" alt="">
+                                    <img src="https://images.pexels.com/photos/7275385/pexels-photo-7275385.jpeg" alt="Person photo">
                                 </figure>
                                 <article>
                                     <strong class="testimonials__person__name">
@@ -457,7 +498,7 @@
                         <div class="testimonials__item">
                             <div class="testimonials__person">
                                 <figure>
-                                    <img src="https://www.looper.com/img/gallery/the-accountant-2-release-date-cast-and-more/l-intro-1681423544.jpg" alt="">
+                                    <img src="https://images.pexels.com/photos/5876695/pexels-photo-5876695.jpeg" alt="Person photo">
                                 </figure>
                                 <article>
                                     <strong class="testimonials__person__name">
@@ -477,7 +518,7 @@
                         <div class="testimonials__item">
                             <div class="testimonials__person">
                                 <figure>
-                                    <img src="https://www.looper.com/img/gallery/the-accountant-2-release-date-cast-and-more/l-intro-1681423544.jpg" alt="">
+                                    <img src="https://images.pexels.com/photos/6274712/pexels-photo-6274712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Person photo">
                                 </figure>
                                 <article>
                                     <strong class="testimonials__person__name">
@@ -497,7 +538,7 @@
                         <div class="testimonials__item">
                             <div class="testimonials__person">
                                 <figure>
-                                    <img src="https://www.looper.com/img/gallery/the-accountant-2-release-date-cast-and-more/l-intro-1681423544.jpg" alt="">
+                                    <img src="https://images.pexels.com/photos/3444087/pexels-photo-3444087.jpeg" alt="Person photo">
                                 </figure>
                                 <article>
                                     <strong class="testimonials__person__name">
@@ -543,14 +584,14 @@
                     <div class="section__header--line"></div>
                 </article>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid rerum dolor nemo dolorem, fuga amet non, in ipsum sequi possimus quisquam sapiente optio iure atque pariatur voluptatibus quos itaque laborum.
+                    Entiendo que puedas tener algunas preguntas sobre nuestros servicios contables y financieros. Aquí te proporciono respuestas a algunas de las preguntas más comunes que mis clientes suelen hacer. Si tienes alguna pregunta adicional, no dudes en contactarme.
                 </p>
             </div>
             <div class="faq__box center">
                 <div class="faq__item">
                     <div class="faq__item__question faq__item__question__active">
                         <p>
-                            Pregunta frecuente
+                            ¿Por qué necesito un contador?
                         </p>
                         <figure>
                             <svg class="arrow arrow--down" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
@@ -560,14 +601,14 @@
                     </div>
                     <div class="faq__item__answer faq__item__answer__active">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maxime repudiandae atque accusamus? Quaerat, atque quos temporibus maiores ipsam asperiores natus, impedit dolor repudiandae libero recusandae odio veritatis eligendi numquam!
+                            Un contador es esencial para mantener un control financiero preciso, cumplir con las regulaciones fiscales y contables, y tomar decisiones financieras informadas. Ayuda a maximizar la eficiencia financiera y a minimizar riesgos.
                         </p>
                     </div>
                 </div>
                 <div class="faq__item">
                     <div class="faq__item__question">
                         <p>
-                            Pregunta frecuente
+                            ¿Cuándo debo contratar a un contador?
                         </p>
                         <figure>
                             <svg class="arrow arrow--down" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
@@ -577,14 +618,14 @@
                     </div>
                     <div class="faq__item__answer">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maxime repudiandae atque accusamus? Quaerat, atque quos temporibus maiores ipsam asperiores natus, impedit dolor repudiandae libero recusandae odio veritatis eligendi numquam!
+                            Debes considerar contratar a un contador desde el inicio de tu negocio o cuando enfrentes cuestiones financieras o fiscales complejas. También es útil en momentos de crecimiento, reestructuración o planificación financiera estratégica.
                         </p>
                     </div>
                 </div>
                 <div class="faq__item">
                     <div class="faq__item__question">
                         <p>
-                            Pregunta frecuente
+                            ¿Puedo hacer mis propios impuestos en lugar de contratar a un contador?
                         </p>
                         <figure>
                             <svg class="arrow arrow--down" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
@@ -594,7 +635,41 @@
                     </div>
                     <div class="faq__item__answer">
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum maxime repudiandae atque accusamus? Quaerat, atque quos temporibus maiores ipsam asperiores natus, impedit dolor repudiandae libero recusandae odio veritatis eligendi numquam!
+                            Si bien puedes hacer tus propios impuestos, un contador puede proporcionar asesoramiento fiscal experto que puede ayudarte a maximizar deducciones y minimizar errores. Esto puede ahorrarte dinero a largo plazo.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__item__question">
+                        <p>
+                            ¿Cómo puedo mantenerme actualizado con las regulaciones fiscales y financieras cambiantes?
+                        </p>
+                        <figure>
+                            <svg class="arrow arrow--down" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
+                                <path fill="#ffb400" d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
+                            </svg>
+                        </figure>
+                    </div>
+                    <div class="faq__item__answer">
+                        <p>
+                            Un contador puede mantenerte al tanto de las regulaciones cambiantes y ofrecer capacitación. También puedes suscribirte a fuentes confiables de información financiera y fiscal y participar en seminarios y talleres.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq__item">
+                    <div class="faq__item__question">
+                        <p>
+                            ¿Cómo puedo elegir al contador adecuado para mis necesidades?
+                        </p>
+                        <figure>
+                            <svg class="arrow arrow--down" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
+                                <path fill="#ffb400" d="M104.704 338.752a64 64 0 0 1 90.496 0l316.8 316.8l316.8-316.8a64 64 0 0 1 90.496 90.496L557.248 791.296a64 64 0 0 1-90.496 0L104.704 429.248a64 64 0 0 1 0-90.496z"></path>
+                            </svg>
+                        </figure>
+                    </div>
+                    <div class="faq__item__answer">
+                        <p>
+                            Busca un contador con experiencia en tu industria y especializado en los servicios que necesitas. Consulta referencias, revisa sus credenciales y verifica su reputación. Además, asegúrate de tener una buena comunicación y compatibilidad.
                         </p>
                     </div>
                 </div>
@@ -608,9 +683,6 @@
                 <figure class="logo links__logo">
                     <img src="./assets/logos/Logo__full.svg" alt="">
                 </figure>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit, ratione!
-                </p>
                 <div class="links__social">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path fill="#ffb400" d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5Z"></path></svg>
@@ -627,6 +699,9 @@
                 </div>
             </div>
             <div class="contact">
+                <p class="contact__text">
+                    ¡Gracias por visitar mi sitio web! Estoy comprometido en brindarte servicios contables y financieros de la más alta calidad. Conéctate conmigo en las redes sociales para obtener consejos y novedades financieras que te ayudarán a alcanzar tus metas.
+                </p>
                 <h2 class="--uppercase">
                     Contacto
                 </h2>
@@ -641,7 +716,7 @@
                             <p>
                                 Mandame un correo
                             </p>
-                            <a href="mailto:">kjbkabsajl@kjdgsb.com</a>
+                            <a href="mailto:">contacto@christopher.com</a>
                         </div>
                     </div>
                     <div class="contact__item">
@@ -654,7 +729,7 @@
                             <p>
                                 Llamame
                             </p>
-                            <a href="tel:+">443464546</a>
+                            <a href="tel:+">(72) 9127 2901</a>
                         </div>
                     </div>
                 </div>

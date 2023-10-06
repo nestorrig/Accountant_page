@@ -118,7 +118,7 @@ body {
 }
 
 h1 {
-    @include Titles(800, 5.8rem)
+    @include Titles(800, 4.8rem)
 }
 
 h2 {
@@ -218,7 +218,7 @@ button {
             align-items: center;
         }
     }
-    a {
+    > a {
         font-size: 1.5rem;
         font-weight: 700;
         &:hover {
@@ -325,7 +325,7 @@ main {
             align-items: start;
         }
         h3.--uppercase {
-            margin-top: 56px;
+            margin-top: 16px;
             margin-bottom: 24px;
         }
     }
@@ -421,7 +421,7 @@ main {
         }
         @include responsive(850px) {
             max-width: 450px;
-            margin-top: -20vw;
+            margin-top: -15vw;
             padding: 32px 36px;
             &__input {
                 margin-bottom: 36px;
@@ -441,13 +441,14 @@ main {
             flex-direction: column;
             justify-content: center;
             gap: 24px;
-            text-align: center;
+            text-wrap: balance;
             width: 100%;
             @include responsive(760px) {
                 width: 33%
             }
 
             figure {
+                width: 60px;
                 @include svgIcons(60px, $primary-color);
                 svg {margin: 0 auto;}
             }
@@ -459,7 +460,7 @@ main {
 }
 .offers {
     .center {
-        @include responsive(760px) {
+        @include responsive(860px) {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 36px;
@@ -467,10 +468,10 @@ main {
                 height: 100%;
             }
         }
-        @include responsive(1000px) {
-            grid-template-columns: 2fr 3fr;
-            grid-auto-rows: 300px;
-        }
+        // @include responsive(1000px) {
+        //     grid-template-columns: 2fr 3fr;
+        //     grid-auto-rows: auto;
+        // }
     }
     #OffersWords {
         padding-right: 2px;
@@ -484,6 +485,9 @@ main {
     }
 }
 .services {
+    > p {
+        max-width: 950px;
+    }
     &__header  {
         margin: 0 auto;
         text-align: center;
@@ -499,29 +503,26 @@ main {
     }
     &__item {
         display: grid;
-        place-content: center;
+        place-content: start;
         width: 100%;
         // max-width: 400px;
-        height: 350px;
-        padding: 50px;
+        height: auto;
+        padding: 36px;
         border: 1px solid $secondary-light-color;
         @include svgIcons(60px, $primary-color);
         svg, h2 {
             margin-bottom: 24px;
         }
         &:hover {
-            background-color: $secondary-color;
-            color: $primary-light-color;
-            h2 {
-                color: $primary-light-color;
-            }
+            background-color: #f3f2f2;
             transition: all .3s;
         }
     }
 }
 .numbers {
     @extend .image;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStud-YhwB9Dde0fPyidw4iFstwUTDL_DXZ4w&usqp=CAU);
+    background-image: url(https://images.pexels.com/photos/936713/pexels-photo-936713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-position: left bottom;
     @include svgIcons(60px, $primary-color);
 
     display: flex;
@@ -692,6 +693,7 @@ main {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 16px;
             padding: 16px 32px;
             font-weight: 600;
             background-color: $secondary-light-color;
@@ -734,6 +736,9 @@ main {
 .footer {
     background-color: $secondary-color;
     color: $primary-light-color;
+    p, a {
+        font-size: 1.2rem;
+    }
     &__box {
         max-width: 800px;
         padding: 48px 24px;
@@ -746,6 +751,9 @@ main {
         @include responsive(760px) {
             flex-direction: row;
             justify-content: space-between;
+        }
+        > div {
+            flex-basis: 50%;
         }
         .links {
             max-width: 400px;
@@ -784,14 +792,16 @@ main {
         .contact {
             width: 100%;
             max-width: 400px;
+            &__text {
+                margin-bottom: 24px;
+            }
             h2 {
                 color: $primary-color;
             }
             &__box {
                 margin-top: 36px;
                 display: flex;
-                flex-direction: row;
-                justify-content: space-between;
+                flex-direction: column;
                 gap: 24px;
             }
             &__item {
@@ -812,7 +822,7 @@ main {
             .contact {
                 width: auto;
                 &__box {
-                    flex-direction: column;
+                    flex-direction: row;
                 }
             }
         }

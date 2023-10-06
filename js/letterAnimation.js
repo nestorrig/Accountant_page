@@ -19,7 +19,7 @@ function typeText() {
     if (currentLetter) {
         spanWords.textContent += currentLetter;
         letterIndex++;
-        setTimeout(typeText, 100); // Espera antes de mostrar la siguiente letra
+        setTimeout(typeText, 50); // Espera antes de mostrar la siguiente letra
     } else {
         // Si se completa una oración, pasa a la siguiente
         setTimeout(() => {

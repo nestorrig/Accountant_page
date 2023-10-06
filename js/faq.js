@@ -6,7 +6,7 @@ for (const q of questions) {
 function showOrHideAnswer(e) {
     const question = e.currentTarget;
     const answer = question.nextElementSibling
-    console.log(answer);
+    // console.log(answer);
     
     question.classList.toggle('faq__item__question__active')
 
