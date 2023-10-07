@@ -54,7 +54,11 @@ $primary-light-color: #ffffff;
         border-right: 1px solid transparent;
     }
 }
-
+@keyframes scrollBar {
+    100% {
+        transform: scaleX(100%);
+    }
+}
 // Base styles
 .brightness {
     filter: brightness(.5);
@@ -177,7 +181,22 @@ button {
     }
     transition: all .3s;
 }
-
+.scroll__status {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 4px;
+    background-color: $primary-color;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation-name: scrollBar;
+    animation-timeline: scroll();
+    @include responsive(950px) {
+        display: none;
+    }
+}
 // Mobile menu
 
 #MobileMenu {
@@ -202,7 +221,7 @@ button {
     &.menu--mobile{
         margin-top: 20px;
         flex-direction: column;
-        gap: 48px;
+        gap: 36px;
         a {
             font-size: 2rem;
         }
@@ -245,16 +264,16 @@ button {
     .iconContainer.in--menu {
         position: fixed;
         z-index: 1;
-        top: 8px;
+        top: 10px;
         right: 8px;
-        width: 56px;
-        height: 56px;
+        width: 48px;
+        height: 48px;
         padding: 8px;
         display: grid;
         place-content: center;
         background-color: $primary-color;
         border-radius: 100%;
-        @include svgIcons(40px, $primary-light-color);
+        @include svgIcons(36px, $primary-light-color);
         @include responsive(950px) {
             display: none;
         }
