@@ -6,13 +6,14 @@ for (const q of questions) {
 function showOrHideAnswer(e) {
     const question = e.currentTarget;
     const answer = question.nextElementSibling
-    // console.log(answer);
-    
-    question.classList.toggle('faq__item__question__active')
 
-    if (answer.classList.contains('faq__item__answer__active')) {
-        answer.classList.remove('faq__item__answer__active')
-    } else {
-        answer.classList.add('faq__item__answer__active')
+    // Cierra la pregunta abierta, cierra todos tecnicamente
+    for (const q of questions) {
+        q.classList.remove('faq__item__question__active')
+        q.nextElementSibling.classList.remove('faq__item__answer__active')
     }
+    // Abre la pregunta seleccionada
+    question.classList.add('faq__item__question__active')
+    answer.classList.add('faq__item__answer__active')
+
 }

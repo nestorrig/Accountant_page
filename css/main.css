@@ -817,8 +817,8 @@ main > .section:nth-child(odd) h2 {
     display: flex;
     gap: 24px;
   }
-  .faq > div {
-    width: 50%;
+  .faq > div:first-child {
+    max-width: 400px;
   }
 }
 .faq__header {
@@ -858,6 +858,7 @@ main > .section:nth-child(odd) h2 {
   width: auto;
 }
 .faq__item__question__active {
+  cursor: default;
   background-color: #184341;
   color: #e9e9e9;
 }
