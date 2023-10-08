@@ -24,16 +24,16 @@ function typeText() {
         // Si se completa una oración, pasa a la siguiente
         setTimeout(() => {
             spanWords.classList.add('complete_sencence') //añado efecto de borrado
-        }, 2500);
+        }, 1500);
         setTimeout(() => {
             spanWords.classList.remove('complete_sencence') // retiro efecto de borrado
-        }, 3000);
+        }, 2000);
         setTimeout(() => {
             spanWords.textContent = "";
             letterIndex = 0;
             textIndex = (textIndex + 1) % texts.length; // Circula por los textos
             setTimeout(typeText, 1000); // Espera antes de comenzar el siguiente texto
-        }, 3000);
+        }, 2000);
     }
 }
 
